@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <lightning-input 
+            type="toggle" 
+            label="Toggle Visibility" 
+            checked={isVisible} 
+            onchange={handleToggleChange}>
+        </lightning-input>
+
+        <template if:true={isVisible}>
+            <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+            <p slot="footer">Card Footer</p>
+        </template>
+    </lightning-card>
+</template>
